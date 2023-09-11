@@ -1,0 +1,488 @@
+/*---Main Page----*/
+/*---Main Page----*/
+/*---Main Page----*/
+/*---Main Page----*/
+/*---Main Page----*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 30vh;
+    width: auto;
+    background-color: darkred;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border: 20px transparent; /* Set a transparent border for spacing */
+    border-image-source: url(images/border.png);
+    border-image-width: 0px;
+    border-image-slice: 1 fill;
+    border-image-outset: 1;
+    border-style: solid;
+
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: center; /* Center the navigation horizontally */
+    align-items: center;
+    flex-direction: column; /* Center align vertically */
+}
+
+nav img {
+    width: 150px;
+    border-radius: 100%;
+    margin-bottom: 20px; /* Add spacing between the image and links */
+}
+
+.nav-links {
+    margin-top: 20px; /* Add spacing above the links */
+    text-align: center; /* Center-align the links */
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center-align the links horizontally */
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: flex;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+/*---Slide Show Gallery---*/
+/* Gallery section styles */
+.gallery {
+    text-align: center;
+    background-color: #FFDBDB;
+    padding: 20px;
+    position: relative;
+}
+
+.gallery h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: darkred;
+}
+
+/* Gallery container styles */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Gallery slide styles */
+.gallery-slide {
+    display: none;
+}
+
+.gallery-slide img {
+    max-width: 750px;
+    height: 500px;
+    border: 5px solid #2C2C2C;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/* Gallery buttons styles */
+.gallery-buttons {
+    margin-top: 10px;
+}
+
+.gallery-buttons button {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    font-size: 30px;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-buttons button:hover {
+    background-color: #ccc; /* Change the background color on hover if needed */
+}
+
+/* Initially show the first slide */
+.gallery-slide:first-child {
+    display: block;
+}
+
+.gallery-buttons .prev,
+.gallery-buttons .next {
+    font-family: "FontAwesome"; /* Use FontAwesome for the arrow icons */
+}
+
+/* Text box styles */
+.text-box {
+    width: auto;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    background-color: #E1B2B2;
+    padding: 70px;
+    margin-top: 0px; /* Add some margin to push it down */
+    margin-left: auto;
+    border: 20px transparent; /* Set a transparent border for spacing */
+}
+
+.text-box h1 {
+    font-size: 62px;
+    color: #D00808;
+}
+
+.text-box p {
+    margin: 5px 0 35px;
+    font-size: 14px;
+    color: #D00808;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #D00808;
+    border: 1px solid #D00808;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid black;
+    background: solid black;
+    transition: .5s;
+}
+
+
+
+/*---Main Page Timeline----*/
+
+.content-container {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    padding: 0px;
+    background-color: #D00808;
+    z-index: 3;
+}
+
+.image-container {
+    flex: 1; /* Make it take up 50% of the container */
+    padding: 0px;
+}
+
+.image-container img {
+    height: auto;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    border: 10px transparent; /* Set a transparent border for spacing */
+    padding: 0px;
+    border-radius: 0px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #777;
+    font: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Stack content on smaller screens */
+        text-align: center;
+    }
+
+    .image-container,
+    .text-container {
+        flex: none; /* Reset flex properties for smaller screens */
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+}
+
+/*---- Links for Instagram, Venmo, Linktree---*/
+
+.ABOUT{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 1px;
+    background-color: #FFDBDB;
+    
+}
+
+
+
+.row{
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.course-col{
+    flex-basis: 10%;
+    background: ##FFDBDB;
+    border-radius: 100%;
+    margin-bottom: 0%;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.course-col img{
+    width: 35px;
+    padding: 0px;
+    border: 2px solid transparent;
+    transition: red 0.5s ease;
+}
+
+.course-col{
+    list-style-type: none;
+    padding-left: 0;
+    border: grey;
+}
+
+.course-col:hover{
+    border-color: red;
+    transition: red 0.5s ease;
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/*--- MEDIA ---*/
+/*--- MEDIA ---*/
+/*--- MEDIA ---*/
+/*--- MEDIA ---*/
+/*--- MEDIA ---*/
+/*--- MEDIA ---*/
+
+.sub-header{
+    height: 30vh;
+    width: auto;
+    background-color: darkred;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border: 20px transparent; /* Set a transparent border for spacing */
+    border-image-source: url(images/border.png);
+    border-image-width: 0px;
+    border-image-slice: 1 fill;
+    border-image-outset: 1;
+    border-style: solid;
+}
+
+
+/*--- Staff ---*/
+/*--- Staff ---*/
+/*--- Staff ---*/
+/*--- Staff ---*/
+/*--- Staff ---*/
+/*--- Staff ---*/
+
+.beta-header{
+    height: 30vh;
+    width: auto;
+    background-color: darkred;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border: 20px transparent; /* Set a transparent border for spacing */
+    border-image-source: url(images/border.png);
+    border-image-width: 0px;
+    border-image-slice: 1 fill;
+    border-image-outset: 1.0;
+    border-style: solid;
+}
+
+.staff-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow staff members to wrap onto a new line if needed */
+    justify-content: center; /* Center-align items horizontally */
+    background-color: #FCF5E5;
+    padding: 22px;
+    max-width: 1500px;
+    margin: 10px auto 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    top: -10px;
+    border-color: rosybrown;
+}
+
+.staff-container h2{
+    padding: 10px;
+    text-align: center;
+    margin: 0px;
+}
+
+/* Style individual staff members */
+.staff-member {
+    width: 300px;
+    margin: 15px;
+    text-align: center;
+}
+
+.staff-member img {
+    width: 300px;
+    max-width: 300px; /* Set a max width for consistency */
+    height: 300px;
+    bottom: -10px;
+    border-radius: 100%;
+    border: 20px transparent; /* Set a transparent border for spacing */
+    border-image-source: url(images/era.png);
+    border-image-width: 0px;
+    border-image-slice: 1 fill;
+    border-image-outset: 0;
+    border-style: solid;
+    transition: transform 0.3s ease;
+}
+
+.staff-member li {
+    list-style: none;
+    margin-top: 8px;
+}
+
+.staff-member li a{
+    margin-top: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.staff-member li a{
+    margin-top: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.staff-member li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.staff-member li a:hover::after {
+    width: 25%;
+}
+
+.staff-member p{
+    color: black;
+    margin-top: -9px;
+}
+
+
+/*--- Events ---*/
+/*--- Events ---*/
+/*--- Events ---*/
+/*--- Events ---*/
+/*--- Events ---*/
+/*--- Events ---*/
+
+.delta-header{
+    height: 30vh;
+    width: auto;
+    background-color: darkred;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border: transparent; /* Set a transparent border for spacing */
+    border-image-source: url(images/border.png);
+    border-image-width: 1px;
+    border-image-slice: 1 fill;
+    border-image-outset: 7;
+    border-style: solid;
+}
+
+
+
+/*--- FAQ ---*/
+/*--- FAQ ---*/
+/*--- FAQ ---*/
+/*--- FAQ ---*/
+/*--- FAQ ---*/
+/*--- FAQ ---*/
+.mu-header{
+    height: 30vh;
+    width: auto;
+    background-color: darkred;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border: transparent; /* Set a transparent border for spacing */
+    border-image-source: url(images/border.png);
+    border-image-width: 1px;
+    border-image-slice: 1 fill;
+    border-image-outset: 7;
+    border-style: solid;
+}
+
+/*--- Calender ---*/
+/*--- Calender ---*/
+/*--- Calender ---*/
+/*--- Calender ---*/
+/*--- Calender ---*/
+/*--- Calender ---*/
+/*--- Calender ---*/
+
+.nu-header{
+    height: 30vh;
+    width: auto;
+    background-color: darkred;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border: transparent; /* Set a transparent border for spacing */
+    border-image-source: url(images/border.png);
+    border-image-width: 1px;
+    border-image-slice: 1 fill;
+    border-image-outset: 7;
+    border-style: solid;
+}
