@@ -20,9 +20,8 @@
     border-image-source: url(images/border.png);
     border-image-width: 0px;
     border-image-slice: 1 fill;
-    border-image-outset: 1;
+    border-image-outset: 1.0;
     border-style: solid;
-
 }
 
 nav {
@@ -313,10 +312,9 @@ p{
     border-image-source: url(images/border.png);
     border-image-width: 0px;
     border-image-slice: 1 fill;
-    border-image-outset: 1;
+    border-image-outset: 1.0;
     border-style: solid;
 }
-
 
 /*--- Staff ---*/
 /*--- Staff ---*/
@@ -346,12 +344,17 @@ p{
     justify-content: center; /* Center-align items horizontally */
     background-color: #FCF5E5;
     padding: 20px;
-    max-width: 1450px;
+    max-width: auto;
     margin: 10px auto 0 auto;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
     top: -10px;
     border-color: rosybrown;
+}
+
+h1{
+    text-align: center;
+    margin: 20px;
 }
 
 .staff-container h2{
@@ -362,7 +365,7 @@ p{
 
 /* Style individual staff members */
 .staff-member {
-    width: 300px;
+    width: 400px;
     margin: 50px;
     text-align: center;
 }
@@ -370,11 +373,11 @@ p{
 .staff-member img {
     width: 350px;
     max-width: 350px; /* Set a max width for consistency */
-    height: 300px;
+    height: 400px;
     bottom: -10px;
-    border-radius: 100%;
+    border-radius: 20%;
     border: 20px transparent; /* Set a transparent border for spacing */
-    border-image-source: url(images/era.png);
+    border-image-source: url(images/dragon.png);
     border-image-width: 0px;
     border-image-slice: 1 fill;
     border-image-outset: 0;
@@ -433,11 +436,11 @@ p{
     background-position: center;
     background-size: cover;
     text-align: center;
-    border: transparent; /* Set a transparent border for spacing */
+    border: 20px transparent; /* Set a transparent border for spacing */
     border-image-source: url(images/border.png);
-    border-image-width: 1px;
+    border-image-width: 0px;
     border-image-slice: 1 fill;
-    border-image-outset: 7;
+    border-image-outset: 1.0;
     border-style: solid;
 }
 
@@ -456,11 +459,11 @@ p{
     background-position: center;
     background-size: cover;
     text-align: center;
-    border: transparent; /* Set a transparent border for spacing */
+    border: 20px transparent; /* Set a transparent border for spacing */
     border-image-source: url(images/border.png);
-    border-image-width: 1px;
+    border-image-width: 0px;
     border-image-slice: 1 fill;
-    border-image-outset: 7;
+    border-image-outset: 1.0;
     border-style: solid;
 }
 
@@ -479,10 +482,27 @@ p{
     background-position: center;
     background-size: cover;
     text-align: center;
-    border: transparent; /* Set a transparent border for spacing */
+    border: 20px transparent; /* Set a transparent border for spacing */
     border-image-source: url(images/border.png);
-    border-image-width: 1px;
+    border-image-width: 0px;
     border-image-slice: 1 fill;
-    border-image-outset: 7;
+    border-image-outset: 1.0;
+    border-style: solid;
+}
+
+/*--- Media ---*/
+
+.psi-header{
+    height: 30vh;
+    width: auto;
+    background-color: darkred;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border: 20px transparent; /* Set a transparent border for spacing */
+    border-image-source: url(images/border.png);
+    border-image-width: 0px;
+    border-image-slice: 1 fill;
+    border-image-outset: 1.0;
     border-style: solid;
 }
