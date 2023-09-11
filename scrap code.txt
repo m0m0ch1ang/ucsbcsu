@@ -1,0 +1,92 @@
+<section class = "text-box"> 
+<div class = "text-box">
+    <h1>UCSB Chinese Student Union</h1>
+    <p>A Union of Students interested in East Asian and Oriental Culture. <br>Find like minded peers and students of similar cultural backgrounds and interests!</p>
+    
+    <a href="about.html"class="hero-btn">Visit Us to Learn More</a>
+</div>    
+
+
+(hover effects)
+
+    <section class="events-images">
+        <div class="row">
+            <div class="A-col">
+                <img src="images/808.jpg" alt="London">
+                <div class="layer">
+                    <h3>Up Coming 88 Rising Event! Come out and meet all the Asian Cultural Orgs and find your new friends!</h3>
+                </div>
+            </div>
+
+            <div class="A-col">
+                <img src="images/808.jpg" alt="New York">
+                <div class="layer">
+                    <h3>As students we seek to not only enrich ourselves in a better education but to also get more in touch with our cultural heritage!</h3>
+                </div>
+            </div>
+
+            <div class="A-col">
+                <img src="images/808.jpg" alt="Washington">
+                <div class="layer">
+                    <h3>We seek all individuals to learn more about Chinese culture, regardless of ethnic or social backgrounds!</h3>
+                </div>
+            </div>
+        </div>
+
+(css for hover)
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.A-col {
+    width: calc(33.33% - 20px); /* Adjust the width based on your requirements */
+    margin: 10px; /* Reduce margin to bring elements closer */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s; /* Add a smooth transition */
+}
+
+.A-col img {
+    width: 100%; /* Make sure the image fills its container */
+    max-height: 150px; /* Adjust the maximum image height */
+    border-radius: 10px; /* Adjust the border radius as needed */
+}
+
+.layer {
+    background: rgba(226, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s; /* Add a smooth transition */
+    border-radius: 10px;
+}
+
+.A-col:hover .layer {
+    opacity: 1;
+}
+
+.layer h3 {
+    font-weight: 500;
+    color: #fff;
+    font-size: 14px; /* Reduce the font size for a smaller hover element */
+    max-width: 80%;
+    text-align: center;
+    transition: margin-top 0.3s; /* Add a smooth transition */
+    margin: 0 auto;
+}
+
+.A-col:hover .layer h3 {
+    margin-top: 10px; /* Reduce margin-top for a smaller hover element */
+}

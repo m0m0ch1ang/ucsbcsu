@@ -10,7 +10,7 @@
 }
 
 .header {
-    height: 30vh;
+    height: 33vh;
     width: auto;
     background-color: darkred;
     background-position: center;
@@ -22,6 +22,7 @@
     border-image-slice: 1 fill;
     border-image-outset: 1.0;
     border-style: solid;
+    font-family: 'Exo 2', sans-serif;
 }
 
 nav {
@@ -33,13 +34,13 @@ nav {
 }
 
 nav img {
-    width: 150px;
+    width: 175px;
     border-radius: 100%;
     margin-bottom: 20px; /* Add spacing between the image and links */
 }
 
 .nav-links {
-    margin-top: 20px; /* Add spacing above the links */
+    margin-top: 0px; /* Add spacing above the links */
     text-align: center; /* Center-align the links */
 }
 
@@ -59,7 +60,8 @@ nav img {
 .nav-links ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
+    padding: 3px;
 }
 
 .nav-links ul li a::after {
@@ -76,6 +78,58 @@ nav img {
     width: 100%;
 }
 
+/*--- Mobile Optimizations---*/
+
+/* Add a CSS media query for screens with a maximum width of 768px (typical for mobile devices) */
+.mobile-menu {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 50px;
+}
+
+.mobile-menu-container {
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* Show/hide the mobile menu container */
+.mobile-menu.active + .mobile-menu-container {
+    display: block;
+}
+
+/* Media query for displaying the mobile menu button */
+@media (max-width: 768px) {
+    .nav-links ul {
+        display: none; /* Hide the desktop navigation links */
+    }
+
+    .mobile-menu-container ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-menu-container ul li {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .mobile-menu-container ul li a {
+        display: block;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .mobile-menu.active + .mobile-menu-container {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+}
 /*---Slide Show Gallery---*/
 /* Gallery section styles */
 .gallery {
@@ -86,9 +140,10 @@ nav img {
 }
 
 .gallery h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
+    font-size: 80px;
+    margin-bottom: 20px;
     color: darkred;
+    font-family: 'Exo 2', sans-serif;
 }
 
 /* Gallery container styles */
@@ -107,7 +162,7 @@ nav img {
 .gallery-slide img {
     max-width: 750px;
     height: 500px;
-    border: 5px solid #2C2C2C;
+    border: 5px solid darkred;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
@@ -121,9 +176,10 @@ nav img {
     background-color: transparent;
     color: black;
     border: 1px solid black;
-    font-size: 30px;
+    font-size: 20px;
     padding: 8px 16px;
     margin: 0 5px;
+    border-radius: 100%;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -148,8 +204,8 @@ nav img {
     color: #fff;
     position: relative;
     text-align: center;
-    background-color: #E1B2B2;
-    padding: 70px;
+    background-color: #FFDBDB;
+    padding: 40px;
     margin-top: 0px; /* Add some margin to push it down */
     margin-left: auto;
     border: 20px transparent; /* Set a transparent border for spacing */
@@ -158,29 +214,32 @@ nav img {
 .text-box h1 {
     font-size: 62px;
     color: #D00808;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .text-box p {
     margin: 5px 0 35px;
-    font-size: 14px;
+    font-size: 16px;
     color: #D00808;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .hero-btn {
     display: inline-block;
     text-decoration: none;
-    color: #D00808;
-    border: 1px solid #D00808;
-    padding: 12px 34px;
-    font-size: 13px;
+    color: darkred;
+    border: 1px solid darkred;
+    padding: 15px 34px;
+    font-size: 16px;
     background: transparent;
     position: relative;
     cursor: pointer;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .hero-btn:hover {
-    border: 1px solid black;
-    background: solid black;
+    border: 1px solid purple;
+    background: solid purple;
     transition: .5s;
 }
 
@@ -193,7 +252,7 @@ nav img {
     align-items: center; /* Vertically center the content */
     padding: 0px;
     background-color: #D00808;
-    z-index: 3;
+    z-index: 2;
 }
 
 .image-container {
@@ -208,12 +267,13 @@ nav img {
     margin: 0 auto;
     border: 10px transparent; /* Set a transparent border for spacing */
     padding: 0px;
-    border-radius: 0px;
+    border-radius: 100%;
 }
 
 h1{
     font-size: 36px;
     font-weight: 600;
+    font-family: 'Exo 2', sans-serif;
 }
 
 p{
@@ -222,6 +282,7 @@ p{
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
+    font-family: 'Exo 2', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -302,7 +363,7 @@ p{
 /*--- MEDIA ---*/
 
 .sub-header{
-    height: 30vh;
+    height: 33vh;
     width: auto;
     background-color: darkred;
     background-position: center;
@@ -324,7 +385,7 @@ p{
 /*--- Staff ---*/
 
 .beta-header{
-    height: 30vh;
+    height: 33vh;
     width: auto;
     background-color: darkred;
     background-position: center;
@@ -355,6 +416,7 @@ p{
 h1{
     text-align: center;
     margin: 20px;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .staff-container h2{
@@ -392,8 +454,10 @@ h1{
 
 .staff-member li a{
     margin-top: 12px;
+    font-size: 24px;
     text-decoration: none;
     color: black;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .staff-member li a{
@@ -430,7 +494,7 @@ h1{
 /*--- Events ---*/
 
 .delta-header{
-    height: 30vh;
+    height: 33vh;
     width: auto;
     background-color: darkred;
     background-position: center;
@@ -453,7 +517,7 @@ h1{
 /*--- FAQ ---*/
 /*--- FAQ ---*/
 .mu-header{
-    height: 30vh;
+    height: 33vh;
     width: auto;
     background-color: darkred;
     background-position: center;
@@ -476,7 +540,7 @@ h1{
 /*--- Calender ---*/
 
 .nu-header{
-    height: 30vh;
+    height: 33vh;
     width: auto;
     background-color: darkred;
     background-position: center;
@@ -493,7 +557,7 @@ h1{
 /*--- Media ---*/
 
 .psi-header{
-    height: 30vh;
+    height: 33vh;
     width: auto;
     background-color: darkred;
     background-position: center;
