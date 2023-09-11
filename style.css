@@ -345,8 +345,8 @@ p{
     flex-wrap: wrap; /* Allow staff members to wrap onto a new line if needed */
     justify-content: center; /* Center-align items horizontally */
     background-color: #FCF5E5;
-    padding: 22px;
-    max-width: 1500px;
+    padding: 20px;
+    max-width: 1450px;
     margin: 10px auto 0 auto;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
@@ -363,13 +363,13 @@ p{
 /* Style individual staff members */
 .staff-member {
     width: 300px;
-    margin: 15px;
+    margin: 50px;
     text-align: center;
 }
 
 .staff-member img {
-    width: 300px;
-    max-width: 300px; /* Set a max width for consistency */
+    width: 350px;
+    max-width: 350px; /* Set a max width for consistency */
     height: 300px;
     bottom: -10px;
     border-radius: 100%;
