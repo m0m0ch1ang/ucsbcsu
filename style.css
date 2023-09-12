@@ -224,6 +224,8 @@ nav img {
     font-family: 'Exo 2', sans-serif;
 }
 
+/*--- Button Box---*/
+
 .hero-btn {
     display: inline-block;
     text-decoration: none;
@@ -322,7 +324,7 @@ p{
 
 .course-col{
     flex-basis: 10%;
-    background: ##FFDBDB;
+    background: #FFDBDB;
     border-radius: 100%;
     margin-bottom: 0%;
     padding: 0px 0px;
@@ -355,12 +357,11 @@ p{
 }
 
 
-/*--- MEDIA ---*/
-/*--- MEDIA ---*/
-/*--- MEDIA ---*/
-/*--- MEDIA ---*/
-/*--- MEDIA ---*/
-/*--- MEDIA ---*/
+/*--- Membership ---*/
+/*--- Membership ---*/
+/*--- Membership ---*/
+/*--- Membership ---*/
+/*--- Membership ---*/
 
 .sub-header{
     height: 33vh;
@@ -375,6 +376,140 @@ p{
     border-image-slice: 1 fill;
     border-image-outset: 1.0;
     border-style: solid;
+}
+
+.membership3-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow staff members to wrap onto a new line if needed */
+    justify-content: center; /* Center-align items horizontally */
+    background-color: white;
+    padding: 20px;
+    max-width: auto;
+    margin: 10px auto 0 auto;
+    border-radius: 15px;
+    top: -10px;   
+}
+
+
+/* Button Styles */
+.button-container {
+    text-align: left;
+    position: relative;
+}
+
+.button-hero {
+    display: inline-block;
+    text-decoration: none;
+    color: darkred;
+    border: 1px solid darkred;
+    padding: 15px 34px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Exo 2', sans-serif;
+    border-radius: 35px;
+}
+
+.button-hero:hover {
+    border: 1px solid purple;
+    background-color: skyblue;
+    transition: .5s;
+}
+
+.button-container {
+    text-align: left;
+    position: relative;
+}
+
+.membership-container{
+    position: relative;
+    text-align: left;
+}
+
+.membership-box{
+    position: relative;
+    text-align: left;
+
+}
+
+.membership-box h1{
+    position: relative;
+    text-align: left;
+    color: darkred;
+}
+
+.membership-box p{
+    position: relative;
+    text-align: left;
+    font-size: 20px;
+    color: darkred;
+}
+
+.membership-hero {
+    display: inline-block;
+    text-decoration: none;
+    color: darkred;
+    border: 1px solid darkred;
+    padding: 15px 34px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Exo 2', sans-serif;
+    border-radius: 35px;
+}
+
+.membership-hero:hover {
+    border: 1px solid purple;
+    background-color: skyblue;
+    transition: .5s;
+}
+
+.membership2-container{
+    position: relative;
+    text-align: left;
+}
+
+.membership2-box{
+    position: relative;
+    text-align: left;
+}
+
+.membership2-box h1{
+    position: relative;
+    text-align: left;
+    color: darkred;
+}
+
+.membership2-box p{
+    position: relative;
+    text-align: left;
+    font-size: 20px;
+    color: darkred;
+}
+
+.membership2-hero {
+    display: inline-block;
+    text-decoration: none;
+    color: darkred;
+    border: 1px solid darkred;
+    padding: 15px 34px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Exo 2', sans-serif;
+    border-radius: 35px;
+}
+
+.membership2-hero:hover {
+    border: 1px solid purple;
+    background-color: skyblue;
+    transition: .5s;
+}
+
+.membership2 img{
 }
 
 /*--- Staff ---*/
@@ -433,8 +568,8 @@ h1{
 }
 
 .staff-member img {
-    width: 350px;
-    max-width: 350px; /* Set a max width for consistency */
+    width: 400px;
+    max-width: 400px; /* Set a max width for consistency */
     height: 400px;
     bottom: -10px;
     border-radius: 20%;
