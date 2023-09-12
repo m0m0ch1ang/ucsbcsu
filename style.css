@@ -132,6 +132,7 @@ nav img {
 }
 /*---Slide Show Gallery---*/
 /* Gallery section styles */
+
 .gallery {
     text-align: center;
     background-color: #FFDBDB;
@@ -378,24 +379,8 @@ p{
     border-style: solid;
 }
 
-.membership3-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow staff members to wrap onto a new line if needed */
-    justify-content: center; /* Center-align items horizontally */
-    background-color: white;
-    padding: 20px;
-    max-width: auto;
-    margin: 10px auto 0 auto;
-    border-radius: 15px;
-    top: -10px;   
-}
-
-
 /* Button Styles */
-.button-container {
-    text-align: left;
-    position: relative;
-}
+
 
 .button-hero {
     display: inline-block;
@@ -422,14 +407,39 @@ p{
     position: relative;
 }
 
-.membership-container{
-    position: relative;
-    text-align: left;
+.button-container,
+.membership3-container{
+        display: flex;
+    flex-wrap: wrap; /* Allow staff members to wrap onto a new line if needed */
+    justify-content: center; /* Center-align items horizontally */
+    background-color: white;
+    padding: 20px;
+    max-width: auto;
+    margin: 10px auto 0 auto;
+    border-radius: 15px;
+    top: -10px;
 }
 
-.membership-box{
+.membership2-container,
+.membership-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow staff members to wrap onto a new line if needed */
+    justify-content: flex-start; /* Center-align items horizontally */
+    background-color: white;
+    padding: 20px;
+    max-width: auto;
+    margin: 10px auto 0 auto;
+    border-radius: 15px;
+    top: -10px;
+    margin: auto;
+}
+
+
+.membership-box,
+.membership-box2{
     position: relative;
     text-align: left;
+    flex: 1;
 
 }
 
@@ -437,6 +447,7 @@ p{
     position: relative;
     text-align: left;
     color: darkred;
+    left: 455px;
 }
 
 .membership-box p{
@@ -444,9 +455,10 @@ p{
     text-align: left;
     font-size: 20px;
     color: darkred;
+    left: 455px;
 }
 
-.membership-hero {
+.membership-hero{
     display: inline-block;
     text-decoration: none;
     color: darkred;
@@ -458,6 +470,7 @@ p{
     cursor: pointer;
     font-family: 'Exo 2', sans-serif;
     border-radius: 35px;
+        left: 455px;
 }
 
 .membership-hero:hover {
@@ -466,30 +479,20 @@ p{
     transition: .5s;
 }
 
-.membership2-container{
-    display: flex;
-    position: relative;
-    text-align: left;
-}
 
-.membership2-container img{
+.membership2-image img{
     max-width: 300px;
-    margin-right: 400px
+    right
+    margin-bottom: 25px;
 
 }
 
-.membership2-box{
-    display: flex
-    position: relative;
-    text-align: left;
-    align-items: center;
-    color: darkred;
-}
 
 .membership2-box h1{
     position: relative;
     text-align: left;
     color: darkred;
+        left: 455px;
 }
 
 .membership2-box p{
@@ -497,6 +500,7 @@ p{
     text-align: left;
     font-size: 20px;
     color: darkred;
+    left: 455px;
 }
 
 .membership2-hero {
@@ -511,6 +515,7 @@ p{
     cursor: pointer;
     font-family: 'Exo 2', sans-serif;
     border-radius: 35px;
+        left: 455px;
 }
 
 .membership2-hero:hover {
@@ -711,4 +716,70 @@ h1{
     border-image-slice: 1 fill;
     border-image-outset: 1.0;
     border-style: solid;
+}
+
+.media {
+    text-align: center;
+    background-color: #FFDBDB;
+    padding: 20px;
+    position: relative;
+}
+
+.media h2 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: darkred;
+    font-family: 'Exo 2', sans-serif;
+}
+
+/* Gallery container styles */
+.media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Gallery slide styles */
+.media-slide {
+    display: none;
+}
+
+.media-slide img {
+    max-width: 750px;
+    height: 500px;
+    border: 5px solid darkred;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/* Gallery buttons styles */
+.media-buttons {
+    margin-top: 10px;
+}
+
+.media-buttons button {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    font-size: 20px;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.media-buttons button:hover {
+    background-color: #ccc; /* Change the background color on hover if needed */
+}
+
+/* Initially show the first slide */
+.media-slide:first-child {
+    display: block;
+}
+
+.media-buttons .prev,
+.media-buttons .next {
+    font-family: "FontAwesome"; /* Use FontAwesome for the arrow icons */
 }
