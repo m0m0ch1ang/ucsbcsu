@@ -467,13 +467,23 @@ p{
 }
 
 .membership2-container{
+    display: flex;
     position: relative;
     text-align: left;
 }
 
+.membership2-container img{
+    max-width: 300px;
+    margin-right: 400px
+
+}
+
 .membership2-box{
+    display: flex
     position: relative;
     text-align: left;
+    align-items: center;
+    color: darkred;
 }
 
 .membership2-box h1{
@@ -507,9 +517,6 @@ p{
     border: 1px solid purple;
     background-color: skyblue;
     transition: .5s;
-}
-
-.membership2 img{
 }
 
 /*--- Staff ---*/

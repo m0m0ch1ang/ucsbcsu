@@ -136,7 +136,37 @@ function toggleMobileMenu() {
     var mobileMenu = document.querySelector('.mobile-menu');
     mobileMenu.classList.toggle('active');
 }    
-    </script>
+</script>
+
+<!--- Java Script for Automatic Scroll Feature --->   
+    
+<script>
+let currentAutoSlide = 0; // Change the variable name to "currentAutoSlide"
+const slidesAuto = document.querySelectorAll('.gallery-slide');
+
+function showAutoSlide(index) {
+    slidesAuto.forEach((slide, i) => {
+        if (i === index) {
+            slide.style.display = 'block';
+        } else {
+            slide.style.display = 'none';
+        }
+    });
+}
+
+function nextAutoSlide() {
+    currentAutoSlide = (currentAutoSlide + 1) % slidesAuto.length;
+    showAutoSlide(currentAutoSlide);
+}
+
+function startAutoSlideshow() {
+    showAutoSlide(currentAutoSlide);
+    setInterval(nextAutoSlide, 3000); // Change slide every 3 seconds (adjust as needed)
+}
+
+// Start the slideshow when the page is loaded
+window.addEventListener('load', startAutoSlideshow);
+</script>
 
 
 
