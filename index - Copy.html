@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> University of California Santa Barbara CSU </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <style>
+        /* Common styles for all screen sizes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        
+        .nav-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .nav-links ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        .gallery {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .gallery-slide {
+            display: none;
+        }
+        
+        .text-box {
+            padding: 20px;
+        }
+        
+        .content-container {
+            text-align: center;
+        }
+        
+        .ABOUT {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        
+        /* Styles for screens up to 768px wide (typically mobile devices) */
+        @media (max-width: 768px) {
+            .nav-links ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #333;
+                width: 200px;
+                text-align: right;
+            }
+            
+            .nav-links.active {
+                display: block;
+            }
+        }
+        
+        /* Styles for screens larger than 768px (typically tablets and desktops) */
+        @media (min-width: 769px) {
+            .mobile-menu {
+                display: none;
+            }
+            
+            .nav-links {
+                display: block;
+            }
+            
+            .nav-links ul {
+                display: flex;
+            }
+            
+            .nav-links ul li {
+                margin-right: 20px;
+            }
+            
+            .nav-links.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/thumb.jpg"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="staff.html">STAFF</a></li>
+                    <li><a href="media.html">MEDIA</a></li>
+                    <li><a href="about.html">MEMBERSHIP</a></li>
+                    <li><a href="calendar.html">CALENDAR</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu">
+                <span onclick="toggleMobileMenu()">&#9776;</span>
+            </div>
+            <!-- Mobile menu container -->
+            <div class="nav-links mobile-menu-container">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="staff.html">STAFF</a></li>
+                    <li><a href="events.html">MEDIA</a></li>
+                    <li><a href="about.html">MEMBERSHIP</a></li>
+                    <li><a href="calendar.html">CALENDAR</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <section class="gallery">
+        <h2>Chinese Student Union</h2>
+        <div class="gallery-container">
+            <div class="gallery-slide">
+                <img src="images/biglittlepics1.JPG" alt="Image 1">
+            </div>
+            <div class="gallery-slide">
+                <img src="images/biglittlepics3.png" alt="Image 2">
+            </div>
+            <div class="gallery-slide">
+                <img src="images/bobby.png" alt="Image 3">
+            </div>
+        </div>
+        <div class="gallery-buttons">
+            <button class="prev" onclick="showSlide('prev')">&#8249;</button> <!-- Left arrow icon -->
+            <button class="next" onclick="showSlide('next')">&#8250;</button> <!-- Right arrow icon -->
+        </div>
+    </section>
+
+    <section class="text-box">
+        <div class="text-box">
+            <h1>About Us</h1>
+            <p>Chinese Student Union is a student-led organization at the UC Santa Barbara campus that aims to foster a safe and fun environment in which students can learn about and connect with Chinese culture and meet likeminded individuals. Members of CSU can find a home away from home and build their family at UCSB. Anyone interested in Chinese culture is welcome!</p>
+            <a href="calendar.html" class="hero-btn">View Full Calendar</a>
+        </div>
+    </section>
+
+    <div class="content-container">
+        <div class="image-container">
+            <img src="images/Timeline.png" alt="Example Image">
+        </div>
+    </div>
+
+    <section class="ABOUT">
+        <div class="row">
+            <div class="course-col">
+                <h3></h3>
+                <li><a href="https://www.instagram.com/ucsbcsu/"><img src="images/instagram.png"></a></li>
+            </div>
+            <div class="course-col">
+                <h3></h3>
+                <li><a href="https://www.venmo.com/u/ucsbcsu"><img src="images/venmo.png"></a></li>
+            </div>
+            <div class="course-col">
+                <h3></h3>
+                <li><a href="https://linktr.ee/ucsbcsu"><img src="images/linktree.png"></a></li>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript code for Toggle Menu -->
+    <script>
+        function toggleMobileMenu() {
+            var mobileMenu = document.querySelector('.mobile-menu-container');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+
+    <!-- JavaScript code for Gallery Slideshow -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.gallery-slide');
+
+        function showSlide(direction) {
+            slides[currentSlide].style.display = 'none';
+
+            if (direction === 'prev') {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            } else {
+                currentSlide = (currentSlide + 1) % slides.length;
+            }
+
+            slides[currentSlide].style.display = 'block';
+        }
+    </script>
+</body>
+</html>

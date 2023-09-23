@@ -38,7 +38,7 @@
     </nav>
 </section>    
     
-<section class="gallery">
+    <section class="gallery">
         <h2>Chinese Student Union</h2>
         <div class="gallery-container">
             <div class="gallery-slide">
@@ -50,21 +50,12 @@
             <div class="gallery-slide">
                 <img src="images/bobby.png" alt="Image 3">
             </div>
-            <div class="gallery-slide">
-                <img src="images/uno.jpg" alt="Image 3">
-            </div>
-            <div class="gallery-slide">
-                <img src="images/dos.jpg" alt="Image 3">
-            </div>
-            <div class="gallery-slide">
-                <img src="images/tres.jpg" alt="Image 3">
-            </div>            
         </div>
-    <div class="gallery-buttons">
-        <button class="prev" onclick="showSlide('prev')">&#8249;</button> <!-- Left arrow icon -->
-        <button class="next" onclick="showSlide('next')">&#8250;</button> <!-- Right arrow icon -->
-</div>
-</section>    
+        <div class="gallery-buttons">
+            <button class="prev" onclick="showSlide('prev')">&#8249;</button> <!-- Left arrow icon -->
+            <button class="next" onclick="showSlide('next')">&#8250;</button> <!-- Right arrow icon -->
+        </div>
+    </section>    
 
 <section class = "text-box"> 
 <div class = "text-box">
@@ -141,7 +132,7 @@ function toggleMobileMenu() {
 <!--- Java Script for Automatic Scroll Feature --->   
     
 <script>
-let currentAutoSlide = 0; // Change the variable name to "currentAutoSlide"
+let currentAutoSlide = 0;
 const slidesAuto = document.querySelectorAll('.gallery-slide');
 
 function showAutoSlide(index) {

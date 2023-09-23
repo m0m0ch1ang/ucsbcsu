@@ -5,6 +5,7 @@
     <title>University of California Santa Barbara CSU</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    
 </head>
 <body>
     <section class="beta-header">
@@ -20,8 +21,23 @@
                 <li><a href="faq.html">FAQ</a></li>    
             </ul>
             </div>
+        <div class="mobile-menu2">
+            <span onclick="toggleMobileMenu()">&#9776;</span>
+        </div>
+        <!-- Mobile menu container -->
+        <div class="mobile-menu2-container" id ="MobileContainer">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="staff.html">STAFF</a></li>
+                <li><a href="events.html">MEDIA</a></li>
+                <li><a href="about.html">MEMBERSHIP</a></li>
+                <li><a href="calendar.html">CALENDAR</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>            
         </nav>
-    </section>        
+    </section>
+    
  <h1> Meet the Staff </h1>
         <section class="staff-container">
             <div class = "background-color"></div>
@@ -171,5 +187,11 @@
             
 <!-- Polaroids behind the staff photos -->       
     </section>
+    <script>
+        function toggleMobileMenu() {
+            var mobileMenuContainer = document.getElementById("mobileMenuContainer");
+            mobileMenuContainer.classList.toggle("active");
+        }
+    </script>    
 </body>
 </html>

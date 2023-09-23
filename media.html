@@ -1,111 +1,88 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Univeristy of California Santa Barbara CSU </title>
-    <link rel = "stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css".>
+    <title>University of California Santa Barbara CSU</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<section class = "psi-header">
+<section class="psi-header">
     <nav>
-        <a href= "index.html"><img src="images/thumb.jpg"></a>
-        <div class = "nav-links">
-                <ul>
+        <a href="index.html"><img src="images/thumb.jpg"></a>
+        <div class="nav-links">
+            <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="staff.html">STAFF</a></li>
                 <li><a href="media.html">MEDIA</a></li>
                 <li><a href="about.html">MEMBERSHIP</a></li>
                 <li><a href="calendar.html">CALENDAR</a></li>
-                <li><a href="faq.html">FAQ</a></li>    
+                <li><a href="faq.html">FAQ</a></li>
             </ul>
-        </div> 
+        </div>
     </nav>
 </section>
 
-    
-<!---- Section Pictures ---->
+<!-- Section Pictures -->
 <section class="media">
-        <h2>Bobby Passed the Fuck Out</h2>
-        <div class="media-container">
-            <div class="media-slide">
-                <img src="images/dead.jpg" alt="Image 1">
-            </div>
-            <div class="media-slide">
-                <img src="images/dead2.jpg" alt="Image 1">
-            </div>
-            <div class="media-slide">
-                <img src="images/dead3.jpg" alt="Image 1">
-            </div>
-            <div class="media-slide">
-                <img src="images/dead4.jpg" alt="Image 1">
-            </div>
-            <div class="media-slide">
-                <img src="images/dead5.jpg" alt="Image 1">
-            </div>
-            <div class="media-slide">
-                <img src="images/dead6.jpg" alt="Image 1">
-            </div>          
+    <h2>Bobby Passed Out</h2>
+    <div class="media-container">
+        <div class="media-slide">
+            <img src="images/dead.jpg">
         </div>
+        <div class="media-slide">
+            <img src="images/dead2.jpg">
+        </div>
+        <div class="media-slide">
+            <img src="images/dead3.jpg">
+        </div>
+        <div class="media-slide">
+            <img src="images/dead4.jpg">
+        </div>
+        <!-- Add more media-slide elements for additional images -->
+    </div>
     <div class="media-buttons">
-        <button class="prev" onclick="showSlide('prev')">&#8249;</button> <!-- Left arrow icon -->
-        <button class="next" onclick="showSlide('next')">&#8250;</button> <!-- Right arrow icon -->
-</div>
-</section>   
+        <button class="prev" onclick="showSlide('prev')">&#8249;</button>
+        <button class="next" onclick="showSlide('next')">&#8250;</button>
+    </div>
+</section>
 
-<!--- Java Script for Toggle Menu --->
+<!-- JavaScript for Toggle Menu and Slideshow -->
 <script>
-let currentSlide = 0; // Initialize the current slide index
-const slides = document.querySelectorAll('.media-slide'); // Get all the slides
+    let currentSlide = 0; // Initialize the current slide index
+    const slides = document.querySelectorAll('.media-slide'); // Get all the slides
 
-function showSlide(direction) {
-    // Hide the current slide
-    slides[currentSlide].style.display = 'none';
+    function showSlide(direction) {
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
 
-    // Calculate the next slide index based on the direction
-    if (direction === 'prev') {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    } else {
-        currentSlide = (currentSlide + 1) % slides.length;
+        // Calculate the next slide index based on the direction
+        if (direction === 'prev') {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        } else {
+            currentSlide = (currentSlide + 1) % slides.length;
+        }
+
+        // Show the next slide
+        slides[currentSlide].style.display = 'block';
     }
 
-    // Show the next slide
-    slides[currentSlide].style.display = 'block';
-}
+    // Initially, display the first slide
+    showSlide('next');
 
-// Initially, display the first slide
-showSlide('next');
+    // Automatic slideshow
+    function nextAutoSlide() {
+        showSlide('next'); // Use the same showSlide function for automatic transitions
+    }
 
+    function startAutoSlideshow() {
+        setInterval(nextAutoSlide, 3000); // Change slide every 3 seconds (adjust as needed)
+    }
+
+    // Start the automatic slideshow when the page is loaded
+    window.addEventListener('load', startAutoSlideshow);
 </script>
-    
-<script>
-let currentAutoSlide = 0; // Change the variable name to "currentAutoSlide"
-const slidesAuto = document.querySelectorAll('.media-slide');
-
-function showAutoSlide(index) {
-    slidesAuto.forEach((slide, i) => {
-        if (i === index) {
-            slide.style.display = 'block';
-        } else {
-            slide.style.display = 'none';
-        }
-    });
-}
-
-function nextAutoSlide() {
-    currentAutoSlide = (currentAutoSlide + 1) % slidesAuto.length;
-    showAutoSlide(currentAutoSlide);
-}
-
-function startAutoSlideshow() {
-    showAutoSlide(currentAutoSlide);
-    setInterval(nextAutoSlide, 3000); // Change slide every 3 seconds (adjust as needed)
-}
-
-// Start the slideshow when the page is loaded
-window.addEventListener('load', startAutoSlideshow);
-</script>
-
 
 
 </body>
