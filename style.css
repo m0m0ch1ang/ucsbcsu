@@ -382,150 +382,122 @@ p{
 
 /* Button Styles */
 
-
-.button-hero {
-    display: inline-block;
-    text-decoration: none;
-    color: darkred;
-    border: 1px solid darkred;
-    padding: 15px 34px;
-    font-size: 16px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-    font-family: 'Exo 2', sans-serif;
-    border-radius: 35px;
-}
-
-.button-hero:hover {
-    border: 1px solid purple;
-    background-color: skyblue;
-    transition: .5s;
-}
-
-.button-container {
-    text-align: left;
-    position: relative;
-}
-
-.button-container,
-.membership3-container{
-        display: flex;
-    flex-wrap: wrap; /* Allow staff members to wrap onto a new line if needed */
-    justify-content: center; /* Center-align items horizontally */
-    background-color: white;
-    padding: 20px;
-    max-width: auto;
-    margin: 10px auto 0 auto;
-    border-radius: 15px;
-    top: -10px;
-    font-family: 'Exo 2', sans-serif;
-}
-
-.membership2-container,
-.membership-container {
+.nav-links ul {
+    list-style: none;
+    padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Allow staff members to wrap onto a new line if needed */
-    justify-content: flex-start; /* Center-align items horizontally */
-    background-color: white;
-    padding: 20px;
-    max-width: auto;
-    margin: 10px auto 0 auto;
-    border-radius: 15px;
-    top: -10px;
-    margin: auto;
+    justify-content: center; /* Center-align items horizontally */
+    align-items: center; /* Center-align items vertically */
 }
 
-
-.membership-box,
-.membership-box2{
-    position: relative;
-    text-align: left;
-    flex: 1;
-
+.nav-links li {
+    margin-right: 20px;
 }
 
-.membership-box h1{
-    position: relative;
-    text-align: left;
-    color: darkred;
-    left: 455px;
-    font-family: 'Exo 2', sans-serif;
-}
-
-.membership-box p{
-    position: relative;
-    text-align: left;
-    font-size: 20px;
-    color: darkred;
-    left: 455px;
-    font-family: 'Exo 2', sans-serif;    
-}
-
-.membership-hero{
-    display: inline-block;
+.nav-links a {
     text-decoration: none;
-    color: darkred;
-    border: 1px solid darkred;
-    padding: 15px 34px;
-    font-size: 16px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-    font-family: 'Exo 2', sans-serif;
-    border-radius: 35px;
-        left: 455px;
+    color: white;
 }
 
-.membership-hero:hover {
-    border: 1px solid purple;
-    background-color: skyblue;
-    transition: .5s;
-}
-
-
-.membership2-image img{
-    max-width: 300px;
-    right
-    margin-bottom: 25px;
-
-}
-
-
-.membership2-box h1{
-    position: relative;
-    text-align: left;
-    color: darkred;
-        left: 455px;
-}
-
-.membership2-box p{
-    position: relative;
-    text-align: left;
-    font-size: 20px;
-    color: darkred;
-    left: 455px;
-}
-
+/* Button Styles */
+.button-hero,
+.membership-hero,
 .membership2-hero {
     display: inline-block;
     text-decoration: none;
-    color: darkred;
+    color: white;
+    background-color: darkred;
     border: 1px solid darkred;
     padding: 15px 34px;
     font-size: 16px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-    font-family: 'Exo 2', sans-serif;
     border-radius: 35px;
-        left: 455px;
+    cursor: pointer;
+    transition: border-color 0.5s, background-color 0.5s;
+    font-family: 'Exo 2', sans-serif;
 }
 
+.button-hero:hover,
+.membership-hero:hover,
 .membership2-hero:hover {
-    border: 1px solid purple;
+    border-color: purple;
     background-color: skyblue;
-    transition: .5s;
+}
+
+/* Container Styles */
+.button-container,
+.membership3-container,
+.membership-container,
+.membership2-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 15px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.membership-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.membership-box,
+.membership-box2 {
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+/* Image styles */
+.membership-box img,
+.membership-box2 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Media queries for mobile view */
+@media screen and (max-width: 768px) {
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .button-hero,
+    .membership-hero,
+    .membership2-hero {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .membership-box,
+    .membership-box2 {
+        max-width: 80%; /* Shrink the image container on mobile */
+    }
+}
+
+.membership3-container {
+    text-align: center;
+    max-width: 100%; /* Set the maximum width to 100% of the viewport */
+    margin: 0 auto; /* Center-align the container horizontally */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in the max-width calculation */
+    overflow: hidden; /* Hide any content that overflows the container */
+}
+
+.membership3-container img {
+    max-width: 100%; /* Ensure the image resizes with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block; /* Remove any extra spacing around the image */
+    margin: 0 auto; /* Center-align the image horizontally */
 }
 
 /*--- Staff ---*/
