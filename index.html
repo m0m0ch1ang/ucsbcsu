@@ -42,19 +42,16 @@
         <h2>Chinese Student Union</h2>
         <div class="gallery-container">
             <div class="gallery-slide">
-                <img src="images/biglittlepics1.JPG">
+                <img src="images/IMG_2668.JPG">
             </div>
             <div class="gallery-slide">
                 <img src="images/biglittlepics3.png">
             </div>
             <div class="gallery-slide">
-                <img src="images/uno.jpg">
+                <img src="images/biglittlepics1.JPG">
             </div>
             <div class="gallery-slide">
-                <img src="images/dos.jpg">
-            </div>
-            <div class="gallery-slide">
-                <img src="images/tres.jpg">
+                <img src="images/bi.JPG">
             </div>
         </div>
         <div class="gallery-buttons">
@@ -135,20 +132,20 @@ function toggleMobileMenu() {
 }    
 </script>
 
-<!--- Java Script for Automatic Scroll Feature --->   
-    
+<!-- JavaScript for Automatic Scroll Feature -->
 <script>
 let currentAutoSlide = 0;
 const slidesAuto = document.querySelectorAll('.gallery-slide');
+let intervalId; // Variable to store the interval ID
 
 function showAutoSlide(index) {
+    // Hide all slides
     slidesAuto.forEach((slide, i) => {
-        if (i === index) {
-            slide.style.display = 'block';
-        } else {
-            slide.style.display = 'none';
-        }
+        slide.style.display = 'none';
     });
+
+    // Display the current slide
+    slidesAuto[index].style.display = 'block';
 }
 
 function nextAutoSlide() {
@@ -158,12 +155,33 @@ function nextAutoSlide() {
 
 function startAutoSlideshow() {
     showAutoSlide(currentAutoSlide);
-    setInterval(nextAutoSlide, 3000); // Change slide every 3 seconds (adjust as needed)
+    clearInterval(intervalId); // Clear any previous interval
+    intervalId = setInterval(nextAutoSlide, 3000); // Start a new interval
 }
 
 // Start the slideshow when the page is loaded
 window.addEventListener('load', startAutoSlideshow);
+
+// JavaScript for Slide Navigation Buttons
+function navigateSlide(direction) {
+    if (direction === 'prev') {
+        currentAutoSlide = (currentAutoSlide - 1 + slidesAuto.length) % slidesAuto.length;
+    } else {
+        currentAutoSlide = (currentAutoSlide + 1) % slidesAuto.length;
+    }
+    showAutoSlide(currentAutoSlide);
+}
 </script>
+    
+    <!-- JavaScript to toggle the mobile menu -->
+    <script>
+function toggleMobileMenu() {
+    var mobileMenuContainer = document.querySelector('.mobile-menu-container');
+    mobileMenuContainer.style.display = (mobileMenuContainer.style.display === 'block') ? 'none' : 'block';
+}
+
+    </script>
+
 
 
 
