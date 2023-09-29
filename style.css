@@ -160,7 +160,7 @@ nav img {
 .gallery-slide img {
     max-width: 750px;
     height: 500px;
-    border: 5px solid darkred;
+    border: 5px solid #d00808;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
@@ -404,10 +404,10 @@ p{
 .membership2-hero {
     display: inline-block;
     text-decoration: none;
-    color: white;
-    background-color: darkred;
-    border: 1px solid darkred;
-    padding: 15px 34px;
+    color: #D00808;
+    background-color: #FFBDBD;
+    border: 1px solid #D00808;
+    padding: 15px 35px;
     font-size: 16px;
     border-radius: 35px;
     cursor: pointer;
@@ -440,6 +440,15 @@ p{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.membership-container h1,
+.membership-container h2,
+.membership-container h4{
+    text-align: left;
+    font-size: 56px;
+    color: #D00808;
+    padding: 15px;
 }
 
 .membership-box,
@@ -716,12 +725,12 @@ h1{
     font-family: 'Exo 2', sans-serif;
 }
 
-body, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, p, ul, li {
+.text-container2 body, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, p, ul, li {
     margin: 2;
     padding: 2;
 }
 
-body {
+.text-container2 body {
     font-family: 'Exo 2', sans-serif;
     background-color: #f0f0f0;
 }
@@ -734,9 +743,19 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14 {
+.text-container2 .top-center-text {
+    text-align: center;
+    padding: 15px;
     margin-bottom: 10px;
-    font-size: 28px;
+    font-size: 55px;
+    font-family: 'Viga', sans-serif;
+    font-weight: bold;
+    color: #D00808;
+}
+
+.text-container h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14 {
+    margin-bottom: 10px;
+    font-size: 24px;
     font-family: 'Viga', sans-serif;
     font-weight: bold;
 }
@@ -809,16 +828,21 @@ a:hover {
     font-family: 'Exo 2', sans-serif;
 }
 
-.text-container3 h3 {
+.text-container3 h2 {
     font-family: 'Viga', sans-serif;
-    background-color: #f0f0f0;
+    background-color: white;
     text-align: center; /* Center the text horizontally */
+    font-size: 45px;
+    padding: 10px;
+    color: #D00808
 }
 
 .text-container3 p {
     font-family: 'Exo 2', sans-serif;
+    font-size: 24px;
     background-color: #f0f0f0;
     text-align: center; /* Center the text horizontally */
+    background: white; 
 }
 
 .text-container3 {
@@ -859,7 +883,7 @@ a:hover {
 .media h2 {
     font-size: 80px;
     margin-bottom: 20px;
-    color: darkred;
+    color: #D00808;
     font-family: 'Viga', sans-serif;
 }
 
@@ -879,7 +903,7 @@ a:hover {
 .media-slide img {
     max-width: 750px;
     height: 500px;
-    border: 5px solid darkred;
+    border: 5px solid #D00808;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
