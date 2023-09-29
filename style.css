@@ -140,8 +140,8 @@ nav img {
 .gallery h2 {
     font-size: 80px;
     margin-bottom: 20px;
-    color: darkred;
-    font-family: 'Exo 2', sans-serif;
+    color: #D00808;
+    font-family: 'Viga', sans-serif;
 }
 
 /* Gallery container styles */
@@ -212,7 +212,7 @@ nav img {
 .text-box h1 {
     font-size: 62px;
     color: #D00808;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Viga', sans-serif;
 }
 
 .text-box p {
@@ -227,8 +227,9 @@ nav img {
 .hero-btn {
     display: inline-block;
     text-decoration: none;
-    color: darkred;
-    border: 1px solid darkred;
+    color: #D00808;
+    border-radius: 100px;
+    border: 1px solid #D00808;
     padding: 15px 34px;
     font-size: 16px;
     background: transparent;
@@ -270,19 +271,20 @@ nav img {
     border-radius: 100%;
 }
 
-h1{
-    font-size: 36px;
+.text-box h1{
+    font-size: 42px;
     font-weight: 600;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Viga', sans-serif;
+    background-color: #FFDBDB;
 }
 
 p{
-    color: #777;
-    font: 14px;
+    color: black;
+    font: 18px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Sen', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -524,29 +526,26 @@ p{
     display: flex;
     flex-wrap: wrap; /* Allow staff members to wrap onto a new line if needed */
     justify-content: center; /* Center-align items horizontally */
-    background-color: #FCF5E5;
-    padding: 20px;
+    padding: 0px;
     max-width: auto;
-    margin: 10px auto 0 auto;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
     top: -10px;
     border-color: rosybrown;
 }
 
 h1{
     text-align: center;
-    margin: 20px;
-    color: darkred;
-    font-size: 40px;
+    color: #D00808;
+    font-size: 75px;
     font-weight: bolder;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Viga', sans-serif;
+    padding: 20px;
 }
 
 .staff-container h2{
     padding: 10px;
     text-align: center;
     margin: 0px;
+    font-family: 'Viga', sans-serif;
 }
 
 /* Style individual staff members */
@@ -738,16 +737,18 @@ body {
 h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14 {
     margin-bottom: 10px;
     font-size: 28px;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Viga', sans-serif;
     font-weight: bold;
 }
 
 h2 {
     font-size: 32px;
+    font-family: 'Viga', sans-serif;
 }
 
 h3 {
     font-size: 24px;
+    font-family: 'Viga', sans-serif;
 }
 
 p {
@@ -809,7 +810,7 @@ a:hover {
 }
 
 .text-container3 h3 {
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Viga', sans-serif;
     background-color: #f0f0f0;
     text-align: center; /* Center the text horizontally */
 }
@@ -859,7 +860,7 @@ a:hover {
     font-size: 80px;
     margin-bottom: 20px;
     color: darkred;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Viga', sans-serif;
 }
 
 /* Gallery container styles */
