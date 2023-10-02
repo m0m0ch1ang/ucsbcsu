@@ -82,27 +82,32 @@ nav img {
 /*--- Mobile Optimizations---*/
 /*--- Mobile Optimizations---*/
 /* Style for the mobile menu button */
+
 .mobile-menu {
     cursor: pointer;
-    display: block; /* Ensure the mobile menu bars are always visible */
+    display: none; /* Ensure the mobile menu bars are always visible */
+    font-size: 24px;
 }
 
-/* Add styles for the "active" state when the mobile menu is displayed */
-.mobile-menu.active + .mobile-menu-container {
-    display: block;
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block; /* Show the mobile menu bars for smaller screens */
+    }
 }
 
-/* Other mobile menu container styles (as provided in the previous response) */
 .mobile-menu-container {
     display: none;
     position: absolute;
     top: 60px; /* Adjust the top position as needed */
     right: 0;
     background-color: #fff;
-    width: 200px;
+    width: 150px;
     padding: 20px;
     z-index: 1000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 10 10 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    border: 5px;
+    border-color: #D00808;
 }
 
 /* Style for mobile menu links */
@@ -112,18 +117,14 @@ nav img {
 }
 
 .mobile-menu-container li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .mobile-menu-container a {
     text-decoration: none;
     color: #000;
     display: block;
-}
-
-/* Add styles for the "active" state when the mobile menu is displayed */
-.mobile-menu.active + .mobile-menu-container {
-    display: block;
+    font-family: 'Exo 2', sans-serif;
 }
 
 
