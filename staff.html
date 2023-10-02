@@ -22,7 +22,11 @@
             </ul>
             </div>
         <!-- Mobile menu container -->
-        <div class="mobile-menu2-container" id ="MobileContainer">
+        <div class="mobile-menu">
+            <span onclick="toggleMobileMenu()">&#9776;</span>
+        </div>
+        <!-- Mobile menu container -->
+        <div class="mobile-menu-container">
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="staff.html">STAFF</a></li>
@@ -31,9 +35,9 @@
                 <li><a href="calendar.html">CALENDAR</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
-        </div>            
-        </nav>
-    </section>
+        </div>
+    </nav>
+</section>    
     
             <h1> Meet the Staff </h1>
         <section class="staff-container">
@@ -186,10 +190,11 @@
 <!-- Polaroids behind the staff photos -->       
     </section>
     <script>
-        function toggleMobileMenu() {
-            var mobileMenuContainer = document.getElementById("mobileMenuContainer");
-            mobileMenuContainer.classList.toggle("active");
-        }
-    </script>    
+function toggleMobileMenu() {
+    var mobileMenuContainer = document.querySelector('.mobile-menu-container');
+    mobileMenuContainer.style.display = (mobileMenuContainer.style.display === 'block') ? 'none' : 'block';
+}
+
+    </script>
 </body>
 </html>

@@ -20,8 +20,22 @@
                 <li><a href="faq.html">FAQ</a></li>    
             </ul>
             </div>
-        </nav>
-    </section>
+        <div class="mobile-menu">
+            <span onclick="toggleMobileMenu()">&#9776;</span>
+        </div>
+        <!-- Mobile menu container -->
+        <div class="mobile-menu-container">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="staff.html">STAFF</a></li>
+                <li><a href="events.html">MEDIA</a></li>
+                <li><a href="about.html">MEMBERSHIP</a></li>
+                <li><a href="calendar.html">CALENDAR</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+</section>   
 
 <section class = "membership-container"> 
 <div class = "membership-box">
@@ -40,6 +54,14 @@
     <p> Welcome to CSU! Follow <a href="https://www.instagram.com/ucsbcsu/">@UCSBCSU </a> on Instagram and join CSU on Shoreline to kepp up with the latest news on meeting, events and more!</p>
 </div>         
     </section>      
+
+    <script>
+function toggleMobileMenu() {
+    var mobileMenuContainer = document.querySelector('.mobile-menu-container');
+    mobileMenuContainer.style.display = (mobileMenuContainer.style.display === 'block') ? 'none' : 'block';
+}
+
+    </script>
     
 </body>
 </html>
